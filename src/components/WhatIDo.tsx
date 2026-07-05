@@ -87,24 +87,21 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
+              <h3>VIDEO EDITING</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Professional video editing services tailored for creators, brands, and businesses. From raw footage to scroll-stopping content — I craft high-quality edits with strong hooks, smooth transitions, color grading, and audio syncing that drive engagement and results.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Services & Formats</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Talking Heads</div>
+                <div className="what-tags">Speed Ramps</div>
+                <div className="what-tags">Compilations</div>
+                <div className="what-tags">Motion Graphics</div>
+                <div className="what-tags">Typography</div>
+                <div className="what-tags">Marketing Ads</div>
+                <div className="what-tags">Color Grading</div>
+                <div className="what-tags">Sound Design</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +125,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
+              <h3>REAL ESTATE</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                We transform listing photos into professional real estate videos for marketing and social media. No video shoot needed — just send your approved photos and I'll deliver polished, branded content ready for Instagram, Facebook, YouTube, and more.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Services & Formats</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Images to Video</div>
+                <div className="what-tags">Virtual Staging</div>
+                <div className="what-tags">Rehab Videos</div>
+                <div className="what-tags">Listing Videos</div>
+                <div className="what-tags">Open House</div>
+                <div className="what-tags">Property Tours</div>
+                <div className="what-tags">Social Reels</div>
+                <div className="what-tags">Agent Branding</div>
               </div>
               <div className="what-arrow"></div>
             </div>

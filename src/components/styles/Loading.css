@@ -186,6 +186,7 @@
   z-index: 9999999999;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   padding: 20px 0px;
   left: 50%;
@@ -197,6 +198,20 @@
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+}
+.loader-logo {
+  height: 90px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin: -20px 0 -20px -10px;
+  transition: transform 0.3s ease;
+}
+.loader-title:hover .loader-logo {
+  transform: scale(1.05);
 }
 @keyframes blink {
   0% {
@@ -352,6 +367,11 @@
   .loader-title {
     font-size: 16px;
   }
+  .loader-logo {
+    height: 120px;
+    max-width: 350px;
+    margin: -30px 0 -30px -15px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .loading-header {
@@ -359,5 +379,10 @@
   }
   .loader-title {
     font-size: 18px;
+  }
+  .loader-logo {
+    height: 135px;
+    max-width: 400px;
+    margin: -35px 0 -35px -18px;
   }
 }

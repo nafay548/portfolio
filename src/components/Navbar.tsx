@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger, useGSAP);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
-  useEffect(() => {
+  useGSAP(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -43,14 +43,14 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          RUN MEDIA
         </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:runmediamarketingagency@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          runmediamarketingagency@gmail.com
         </a>
         <ul>
           <li>
@@ -67,6 +67,16 @@ const Navbar = () => {
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />
             </a>
+          </li>
+          <li>
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+              className="nav-book-btn"
+              data-cursor="disable"
+              type="button"
+            >
+              BOOK A ZOOM CALL
+            </button>
           </li>
         </ul>
       </div>

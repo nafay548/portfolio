@@ -3,6 +3,7 @@ import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   BallCollider,
   Physics,
@@ -13,14 +14,12 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/capcut.svg",
+  "/images/davinci.svg",
+  "/images/higgsfield.svg",
+  "/images/veo_3.svg",
+  "/images/opus.svg",
+  "/images/elevenlabs.svg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -128,6 +127,9 @@ const TechStack = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    // Refresh ScrollTrigger when this lazy component mounts to fix pin spacing
+    setTimeout(() => ScrollTrigger.refresh(), 100);
+
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const threshold = document
@@ -155,20 +157,24 @@ const TechStack = () => {
     return textures.map(
       (texture) =>
         new THREE.MeshPhysicalMaterial({
+          color: "#ffffff",
           map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
+          metalness: 0.1,
+          roughness: 0.1,
+          clearcoat: 1.0,
+          clearcoatRoughness: 0.1,
         })
     );
   }, []);
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <div style={{ position: "absolute", top: "120px", width: "100%", zIndex: 1, pointerEvents: "none" }}>
+        <h2 style={{ position: "relative", top: 0, marginTop: 0, marginBottom: "10px" }}> My Tools & Software</h2>
+        <p style={{ textAlign: "center", margin: 0, fontSize: "1.2rem", fontWeight: 300 }}>
+          CapCut Pro • DaVinci Resolve • AI Tools (Higgsfield, VEO 3, Opus, ElevenLabs)
+        </p>
+      </div>
 
       <Canvas
         shadows

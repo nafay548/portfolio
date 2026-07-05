@@ -6,9 +6,9 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I help creators, businesses, and real estate agents transform their raw footage, long-form videos, or listing content into <strong>engaging, scroll-stopping short-form videos</strong> for TikTok, Instagram Reels, and YouTube Shorts.
+          <br /><br />
+          No complicated shoots. No wasted content. Just <strong>high-performing videos that get views and engagement.</strong>
         </p>
       </div>
     </div>
